@@ -75,9 +75,6 @@
     "nomorTelepon": {
       "type": "string"
     },
-    "profilePicture": {
-      "type": "string"
-    },
     "payments": {
       "type": "relation",
       "relation": "oneToMany",
@@ -89,6 +86,13 @@
       "relation": "manyToMany",
       "target": "api::class.class",
       "mappedBy": "users"
+    },
+    "profilePicture": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

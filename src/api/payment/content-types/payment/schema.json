@@ -4,7 +4,8 @@
   "info": {
     "singularName": "payment",
     "pluralName": "payments",
-    "displayName": "Payment"
+    "displayName": "Payment",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -21,25 +22,24 @@
       "type": "string"
     },
     "buktiPembayaran": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "class": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::class.class"
+      ]
     },
     "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "payments"
+    },
+    "class": {
+      "type": "string"
     }
   }
 }
