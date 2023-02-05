@@ -93,6 +93,12 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "challenges": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::challenge.challenge",
+      "mappedBy": "users_permissions_user"
     }
   }
 }
