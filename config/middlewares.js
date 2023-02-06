@@ -18,11 +18,12 @@ module.exports = [
   {
     name: "strapi::cors",
     config: {
-      enabled: false,
-      methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
-      headers: ["Authorization", "Content-Type"],
+      enabled: true,
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
       credentials: true,
-      origin: ["*"],
+      origin: ["http://localhost:3000","https://ruang-edit.netlify.app"],
+      keepHeaderOnError: true,
     },
   },
   "strapi::poweredBy",
