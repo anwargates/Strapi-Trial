@@ -22,7 +22,7 @@ module.exports = [
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
       headers: ["Content-Type", "Authorization", "Origin", "Accept"],
       credentials: true,
-      origin: ["http://localhost:3000","https://ruang-edit.netlify.app"],
+      origin: ["http://localhost:3000", "https://ruang-edit.netlify.app", "*"],
       keepHeaderOnError: true,
     },
   },
