@@ -14,15 +14,17 @@ module.exports = [
       },
     },
   },
-  'strapi::cors',
-  // {
-  //   name: "strapi::cors",
-  //   config: {
-  //     enabled: true,
-  //     headers: "*",
-  //     origin: ["https://ruang-edit.netlify.app/", "http://localhost:3000/"],
-  //   },
-  // },
+  // 'strapi::cors',
+  {
+    name: "strapi::cors",
+    config: {
+      enabled: true,
+      methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+      headers: ["Authorization", "Content-Type"],
+      credentials: true,
+      origin: "*",
+    },
+  },
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
