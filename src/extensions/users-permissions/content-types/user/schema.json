@@ -88,17 +88,22 @@
       "mappedBy": "users"
     },
     "profilePicture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "challenges": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::challenge.challenge",
       "mappedBy": "user"
+    },
+    "kelengkapanProfil": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
