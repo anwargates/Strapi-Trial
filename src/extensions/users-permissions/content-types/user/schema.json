@@ -104,6 +104,12 @@
     "kelengkapanProfil": {
       "type": "boolean",
       "default": false
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "user"
     }
   }
 }
